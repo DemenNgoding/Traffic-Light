@@ -1,7 +1,8 @@
 #include "RGB_Led.h"
 
 rgbLed::rgbLed(int redPin, int greenPin, int bluePin)
-    : _redPin(redPin), _greenPin(greenPin), _bluePin(bluePin), _duration(0) {}
+    : _redPin(redPin), _greenPin(greenPin), _bluePin(bluePin) {}
+
 
 void rgbLed::begin() {
     pinMode(_redPin, OUTPUT);
@@ -19,4 +20,3 @@ void rgbLed::setColor(int red, int green, int blue) {
 void rgbLed::off() {
     setColor(0, 0, 0);
 }
-
